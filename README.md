@@ -2,7 +2,7 @@
 
 매달 한국의 최신 **소비자물가**와 **생산자물가**를 공식 통계 API에서 받아와서, 경제를 잘 모르는 사람도 읽기 쉬운 **HTML 이메일 뉴스레터**로 만들어 보내는 자동화 프로젝트입니다.
 
-<p align="center"><img src="price-briefing/docs/email-preview.png" width="360" alt="뉴스레터 메일 미리보기"></p>
+<p align="center"><img src="docs/email-preview.png" width="360" alt="뉴스레터 메일 미리보기"></p>
 
 ## 주요 기능
 
@@ -61,7 +61,7 @@
 ## 파일 구성
 
 ```
-price-briefing/
+moneyNewsLetter/
 ├── fetch_ecos.py          # ECOS API에서 최근 월 CPI·PPI 데이터 수집 → data.json
 ├── build.py               # 등락률 계산, 판단 규칙 적용, HTML 메일 생성
 ├── sectors_2026-10.json   # 2026년 10월 선정 품목의 부문 분류 예시
@@ -75,7 +75,7 @@ price-briefing/
 Python 3.9 이상, 표준 라이브러리만 사용합니다.
 
 ```bash
-cd price-briefing
+cd moneyNewsLetter
 
 # 1. 데이터 수집 (키를 생략하면 ECOS 체험용 키 'sample'로 조회, 호출당 10건 제한이라 2~3분 걸림)
 python3 fetch_ecos.py [ECOS_API_KEY] > data.json
